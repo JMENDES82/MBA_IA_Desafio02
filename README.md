@@ -19,6 +19,23 @@ O ZIP citado na conversa anterior (`/mnt/data/fullcycle-solucao-langsmith.zip`) 
 disponível neste computador. Esta implementação foi construída a partir do fork.
 O YAML v1 é a semente incluída pelo upstream; o script de pull poderá atualizá-lo com a versão do Hub.
 
+## Execução retomada em 27/10/2026
+
+Repositório publicado clonado e verificado no commit `27d66bbe2d21510a58e36e881b84b23ace19cfcf`.
+Executados os quatro comandos solicitados: **16 testes de prompt passaram**;
+pull, push e avaliação encerraram com código 1 por configuração ausente.
+A suíte completa passou com **22 testes**, e `pip check` não encontrou conflitos.
+
+Faltam `LANGSMITH_API_KEY`, `LANGSMITH_PROJECT`, `USERNAME_LANGSMITH_HUB`,
+`LLM_PROVIDER`, `LLM_MODEL`, `EVAL_MODEL` e a chave do provedor escolhido
+(`GOOGLE_API_KEY` ou `OPENAI_API_KEY`). Não foi encontrado `.env` nos trabalhos
+inspecionados nem credenciais nas variáveis de processo, usuário ou máquina.
+
+As cinco notas seguem não medidas; experimento, três traces, screenshots do
+LangSmith e links públicos do Hub/dataset permanecem pendentes.
+[Relatório e logs autênticos da execução](docs/evidencias/2026-10-27/README.md)
+incluem horários, códigos de saída e hashes SHA-256 dos arquivos executados.
+
 ## Técnicas Aplicadas (Fase 2)
 
 - **Few-shot Learning:** três pares entrada/saída mostram uma falha de persistência de fonte,

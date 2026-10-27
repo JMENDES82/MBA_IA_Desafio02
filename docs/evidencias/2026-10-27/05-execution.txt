@@ -1,0 +1,6 @@
+$ python -m pytest tests -q
+started_at: 2026-10-27T14:48:34.049650-03:00
+exit_code: 0
+
+......................                                                   [100%]
+22 passed in 0.33s

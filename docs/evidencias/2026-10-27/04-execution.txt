@@ -1,0 +1,22 @@
+$ python src/evaluate.py
+started_at: 2026-10-27T14:48:32.971459-03:00
+exit_code: 1
+
+
+==================================================
+AVALIAÇÃO DE PROMPTS OTIMIZADOS
+==================================================
+
+Provider: 
+Modelo Principal: 
+Modelo de Avaliação: 
+
+❌ Variáveis de ambiente faltando:
+   - LANGSMITH_API_KEY
+   - LANGSMITH_PROJECT
+   - USERNAME_LANGSMITH_HUB
+   - LLM_PROVIDER
+   - LLM_MODEL
+   - EVAL_MODEL
+
+Configure-as no arquivo .env antes de continuar.

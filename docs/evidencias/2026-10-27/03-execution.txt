@@ -1,0 +1,13 @@
+$ pytest tests/test_prompts.py
+started_at: 2026-10-27T14:48:30.479605-03:00
+exit_code: 0
+
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.7.0
+rootdir: C:\Users\jm_fe\Documents\Codex\2026-10-27\referenced-chatgpt-conversation-this-is-an-2\work\MBA_IA_Desafio02
+plugins: anyio-4.15.1, langsmith-0.13.0
+collected 16 items
+
+tests\test_prompts.py ................                                   [100%]
+
+============================= 16 passed in 0.61s ==============================

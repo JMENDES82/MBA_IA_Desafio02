@@ -48,3 +48,5 @@ ENV/
 screenshots/
 results/
 .claude/
+# Ambiente virtual local
+.venv/

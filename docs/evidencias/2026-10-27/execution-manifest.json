@@ -1,0 +1,54 @@
+{
+  "repository": "https://github.com/JMENDES82/MBA_IA_Desafio02",
+  "source_commit": "27d66bbe2d21510a58e36e881b84b23ace19cfcf",
+  "files_sha256": {
+    "src/pull_prompts.py": "55649849b7aed254abbbcb0a731a8aa41cd290035fb9dbedac5f1b6c2f077908",
+    "src/push_prompts.py": "1f082ae73126f03a768c883b343508f840d72b2deab2f555e3729b4e52cb983c",
+    "src/evaluate.py": "4f2a071bd7d70d70fc32d3f2c3be7b69b9281b253db7ddaa2c9eaed2c3a47517",
+    "src/metrics.py": "ca785f565cefcfe5439752904b1a3f2fb6cb332ff4e20259b8abc8cd3d6729c4",
+    "src/utils.py": "6597bca796c2f9a6e887035d6630d2aa1d869f64a4f390f361602de5e94c85ef",
+    "tests/test_prompts.py": "777d391bd4a6b68296d0ca52b2e2e0394d67642dd7e9212404d58da79c460210",
+    "tests/test_hub.py": "1f81d116db765406e7d358410a0abbfd45531578bf158bba3aa4b9dfd0a1297e",
+    "prompts/bug_to_user_story_v2.yml": "1e40e9c9448c8672edaf23defd432d0cbe285c263e33b508977a1deee9e8a28d",
+    "datasets/bug_to_user_story.jsonl": "5b33034771ab6f0bdfdb5d24c7def12ce0e18e95dc51e0b185e742d7117bfa4d",
+    "requirements.txt": "5986ab1e02f4a63795ae8cd5e4451b8f16c77de6c9da2660fdf71bd9d82802d8"
+  },
+  "executions": [
+    {
+      "command": "python src/pull_prompts.py",
+      "started_at": "2026-10-27T14:48:28.602131-03:00",
+      "exit_code": 1,
+      "output": "❌ Variáveis de ambiente faltando:\n   - LANGSMITH_API_KEY\n\nConfigure-as no arquivo .env antes de continuar.\n"
+    },
+    {
+      "command": "python src/push_prompts.py",
+      "started_at": "2026-10-27T14:48:29.517007-03:00",
+      "exit_code": 1,
+      "output": "❌ Variáveis de ambiente faltando:\n   - LANGSMITH_API_KEY\n   - USERNAME_LANGSMITH_HUB\n\nConfigure-as no arquivo .env antes de continuar.\n"
+    },
+    {
+      "command": "pytest tests/test_prompts.py",
+      "started_at": "2026-10-27T14:48:30.479605-03:00",
+      "exit_code": 0,
+      "output": "============================= test session starts =============================\nplatform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.7.0\nrootdir: C:\\Users\\jm_fe\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an-2\\work\\MBA_IA_Desafio02\nplugins: anyio-4.15.1, langsmith-0.13.0\ncollected 16 items\n\ntests\\test_prompts.py ................                                   [100%]\n\n============================= 16 passed in 0.61s ==============================\n"
+    },
+    {
+      "command": "python src/evaluate.py",
+      "started_at": "2026-10-27T14:48:32.971459-03:00",
+      "exit_code": 1,
+      "output": "\n==================================================\nAVALIAÇÃO DE PROMPTS OTIMIZADOS\n==================================================\n\nProvider: \nModelo Principal: \nModelo de Avaliação: \n\n❌ Variáveis de ambiente faltando:\n   - LANGSMITH_API_KEY\n   - LANGSMITH_PROJECT\n   - USERNAME_LANGSMITH_HUB\n   - LLM_PROVIDER\n   - LLM_MODEL\n   - EVAL_MODEL\n\nConfigure-as no arquivo .env antes de continuar.\n"
+    },
+    {
+      "command": "python -m pytest tests -q",
+      "started_at": "2026-10-27T14:48:34.049650-03:00",
+      "exit_code": 0,
+      "output": "......................                                                   [100%]\n22 passed in 0.33s\n"
+    },
+    {
+      "command": "python -m pip check",
+      "started_at": "2026-10-27T14:48:35.559196-03:00",
+      "exit_code": 0,
+      "output": "No broken requirements found.\n"
+    }
+  ]
+}

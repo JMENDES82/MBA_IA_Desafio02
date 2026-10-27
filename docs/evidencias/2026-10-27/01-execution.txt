@@ -1,0 +1,8 @@
+$ python src/pull_prompts.py
+started_at: 2026-10-27T14:48:28.602131-03:00
+exit_code: 1
+
+❌ Variáveis de ambiente faltando:
+   - LANGSMITH_API_KEY
+
+Configure-as no arquivo .env antes de continuar.

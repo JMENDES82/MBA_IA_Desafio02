@@ -1,0 +1,9 @@
+$ python src/push_prompts.py
+started_at: 2026-10-27T14:48:29.517007-03:00
+exit_code: 1
+
+❌ Variáveis de ambiente faltando:
+   - LANGSMITH_API_KEY
+   - USERNAME_LANGSMITH_HUB
+
+Configure-as no arquivo .env antes de continuar.
