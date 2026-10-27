@@ -1,0 +1,10 @@
+{
+  "name": "push",
+  "command": [
+    "python",
+    "src/push_prompts.py"
+  ],
+  "started_at_utc": "2026-10-27T18:05:24.921783+00:00",
+  "exit_code": 1,
+  "output": "Falha no push (LangSmithError). Confira credenciais, handle e acesso.\n"
+}

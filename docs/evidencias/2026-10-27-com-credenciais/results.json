@@ -1,0 +1,53 @@
+[
+  {
+    "name": "openai-preflight",
+    "command": [
+      "python",
+      "-c",
+      "import sys; sys.path.insert(0,'src'); from utils import get_llm; r=get_llm().invoke('Responda apenas OK.'); print(r.content)"
+    ],
+    "started_at_utc": "2026-10-27T18:05:17.827226+00:00",
+    "exit_code": 1,
+    "output": "Traceback (most recent call last):\n  File \"C:\\Users\\jm_fe\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an-2\\work\\MBA_IA_Desafio02\\.venv\\Lib\\site-packages\\langchain_openai\\chat_models\\base.py\", line 1904, in _generate\n    raw_response = self.client.with_raw_response.create(**payload)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jm_fe\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an-2\\work\\MBA_IA_Desafio02\\.venv\\Lib\\site-packages\\openai\\_legacy_response.py\", line 369, in wrapped\n    return cast(LegacyAPIResponse[R], func(*args, **kwargs))\n                                      ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jm_fe\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an-2\\work\\MBA_IA_Desafio02\\.venv\\Lib\\site-packages\\openai\\_utils\\_utils.py\", line 298, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jm_fe\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an-2\\work\\MBA_IA_Desafio02\\.venv\\Lib\\site-packages\\openai\\resources\\chat\\completions\\completions.py\", line 1395, in create\n    return self._post(\n           ^^^^^^^^^^^\n  File \"C:\\Users\\jm_fe\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an-2\\work\\MBA_IA_Desafio02\\.venv\\Lib\\site-packages\\openai\\_base_client.py\", line 1480, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jm_fe\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an-2\\work\\MBA_IA_Desafio02\\.venv\\Lib\\site-packages\\openai\\_base_client.py\", line 1253, in request\n    raise self._make_status_error_from_response(err.response) from None\nopenai.BadRequestError: Error code: 400 - Unsupported value: 'temperature' does not support 0.0 with this model. Only the default (1) value is supported.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"C:\\Users\\jm_fe\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an-2\\work\\MBA_IA_Desafio02\\.venv\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 488, in invoke\n    self.generate_prompt(\n  File \"C:\\Users\\jm_fe\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an-2\\work\\MBA_IA_Desafio02\\.venv\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1877, in generate_prompt\n    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jm_fe\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an-2\\work\\MBA_IA_Desafio02\\.venv\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 1684, in generate\n    self._generate_with_cache(\n  File \"C:\\Users\\jm_fe\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an-2\\work\\MBA_IA_Desafio02\\.venv\\Lib\\site-packages\\langchain_core\\language_models\\chat_models.py\", line 2022, in _generate_with_cache\n    result = self._generate(\n             ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\jm_fe\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an-2\\work\\MBA_IA_Desafio02\\.venv\\Lib\\site-packages\\langchain_openai\\chat_models\\base.py\", line 1907, in _generate\n    _handle_openai_bad_request(e)\n  File \"C:\\Users\\jm_fe\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an-2\\work\\MBA_IA_Desafio02\\.venv\\Lib\\site-packages\\langchain_openai\\chat_models\\base.py\", line 644, in _handle_openai_bad_request\n    raise OpenAIInvalidRequestError(\nlangchain_openai.chat_models.base.OpenAIInvalidRequestError: Error code: 400 - Unsupported value: 'temperature' does not support 0.0 with this model. Only the default (1) value is supported.\n"
+  },
+  {
+    "name": "pull",
+    "command": [
+      "python",
+      "src/pull_prompts.py"
+    ],
+    "started_at_utc": "2026-10-27T18:05:23.064448+00:00",
+    "exit_code": 1,
+    "output": "Falha no pull (LangSmithError). Confira credenciais, acesso e formato.\n"
+  },
+  {
+    "name": "push",
+    "command": [
+      "python",
+      "src/push_prompts.py"
+    ],
+    "started_at_utc": "2026-10-27T18:05:24.921783+00:00",
+    "exit_code": 1,
+    "output": "Falha no push (LangSmithError). Confira credenciais, handle e acesso.\n"
+  },
+  {
+    "name": "tests",
+    "command": [
+      "pytest",
+      "tests/test_prompts.py"
+    ],
+    "started_at_utc": "2026-10-27T18:05:26.764467+00:00",
+    "exit_code": 0,
+    "output": "============================= test session starts =============================\nplatform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.7.0\nrootdir: C:\\Users\\jm_fe\\Documents\\Codex\\2026-10-27\\referenced-chatgpt-conversation-this-is-an-2\\work\\MBA_IA_Desafio02\nplugins: anyio-4.15.1, langsmith-0.13.0\ncollected 16 items\n\ntests\\test_prompts.py ................                                   [100%]\n\n============================= 16 passed in 0.25s ==============================\n"
+  },
+  {
+    "name": "evaluate",
+    "command": [
+      "python",
+      "src/evaluate.py"
+    ],
+    "started_at_utc": "2026-10-27T18:05:28.324171+00:00",
+    "exit_code": 1,
+    "output": "\n==================================================\nAVALIAÇÃO DE PROMPTS OTIMIZADOS\n==================================================\n\nProvider: openai\nModelo Principal: gpt-6-sol\nModelo de Avaliação: gpt-6-sol\n\nCriando dataset de avaliação: MBA_IA_Desafio02-eval...\n   ✓ Carregados 15 exemplos do arquivo datasets/bug_to_user_story.jsonl\n   ⚠️  Erro ao criar dataset: Failed to GET /datasets in LangSmith API. HTTPError('403 Client Error: Forbidden for url: https://api.smith.langchain.com/datasets?limit=100&name=MBA_IA_Desafio02-eval&offset=0', '{\"type\":\"about:blank\",\"title\":\"Forbidden\",\"status\":403,\"detail\":\"Permission datasets:read is not allowed for tracing keys\"}')\n\n======================================================================\nPROMPTS PARA AVALIAR\n======================================================================\n\nEste script irá puxar prompts do LangSmith Hub.\nCertifique-se de ter feito push dos prompts antes de avaliar:\n  python src/push_prompts.py\n\n\n🔍 Avaliando: jmendes82/bug_to_user_story_v2\n   Puxando prompt do LangSmith Hub: jmendes82/bug_to_user_story_v2\n\n======================================================================\n❌ ERRO: Não foi possível carregar o prompt 'jmendes82/bug_to_user_story_v2'\n======================================================================\n\nErro técnico: Failed to GET /commits/jmendes82/bug_to_user_story_v2/latest in LangSmith API. HTTPError('403 Client Error: Forbidden for url: https://api.smith.langchain.com/commits/jmendes82/bug_to_user_story_v2/latest', 'Permission prompts:read is not allowed for tracing keys\\n')\n\nVerifique:\n- LANGSMITH_API_KEY está configurada corretamente no .env\n- Você tem acesso ao workspace do LangSmith\n- Sua conexão com a internet está funcionando\n\n======================================================================\n\n\n❌ Falha ao avaliar 'jmendes82/bug_to_user_story_v2': Failed to GET /commits/jmendes82/bug_to_user_story_v2/latest in LangSmith API. HTTPError('403 Client Error: Forbidden for url: https://api.smith.langchain.com/commits/jmendes82/bug_to_user_story_v2/latest', 'Permission prompts:read is not allowed for tracing keys\\n')\n\n==================================================\nRESUMO FINAL\n==================================================\n\nPrompts avaliados: 1\nAprovados: 0\nReprovados: 1\n\nResultados no LangSmith (notas gravadas como feedback no experimento):\n\n⚠️  Alguns prompts não atingiram todas as métricas >= 0.8\n\nPróximos passos:\n1. Refatore os prompts com score baixo\n2. Faça push novamente: python src/push_prompts.py\n3. Execute: python src/evaluate.py novamente\n"
+  }
+]

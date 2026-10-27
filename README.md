@@ -7,19 +7,24 @@ Autor: [JMENDES82](https://github.com/JMENDES82).
 
 ## Status da entrega
 
-Código implementado e validado localmente. **Avaliação real no LangSmith pendente**:
-não foram fornecidos neste ambiente chave LangSmith, handle do Hub nem configuração de modelos.
-Nenhuma nota de LLM, publicação no Hub, execução de pull remoto ou aprovação >= 0,8 é alegada.
+Código validado localmente. **Avaliação real no LangSmith bloqueada por permissões da chave de tracing.**
+Em 27/10/2026, os quatro comandos foram executados com credenciais temporárias:
+16 testes de prompt passaram; pull, push e avaliação falharam por acesso negado.
+LangSmith retornou HTTP 403 para `datasets:read` e `prompts:read`, não permitidos para tracing keys.
 
-Validação local em 27/10/2026: **22 testes passaram**, incluindo os seis requisitos
-do enunciado, renderização do template, rejeição de YAML inválido e contratos de
-pull/push simulados. Dependências instaladas com sucesso e sem conflitos detectados.
+A chave OpenAI e `gpt-6-sol` funcionaram em chamada mínima (resposta `OK`).
+O modelo rejeitou `temperature=0` usado pelo projeto; para mantê-lo, será necessário
+adaptar a configuração para omitir temperature. Avaliador, métricas, utils e dataset
+não foram alterados nesta execução. Nenhuma das cinco notas foi medida.
+
+[Resultados e logs reais com credenciais](docs/evidencias/2026-10-27-com-credenciais/README.md).
+A suíte completa local anterior passou com 22 testes e sem conflitos de dependências.
 
 O ZIP citado na conversa anterior (`/mnt/data/fullcycle-solucao-langsmith.zip`) não estava
 disponível neste computador. Esta implementação foi construída a partir do fork.
 O YAML v1 é a semente incluída pelo upstream; o script de pull poderá atualizá-lo com a versão do Hub.
 
-## Execução retomada em 27/10/2026
+## Execução inicial sem credenciais em 27/10/2026 (histórico)
 
 Repositório publicado clonado e verificado no commit `27d66bbe2d21510a58e36e881b84b23ace19cfcf`.
 Executados os quatro comandos solicitados: **16 testes de prompt passaram**;
@@ -114,7 +119,7 @@ pelo enunciado; prompts do Hub são objetos serializados e não devem ser obtido
 
 ## Resultados Finais
 
-**Pendente de execução real.** Testes estruturais e simulações não medem a qualidade das respostas.
+**Avaliação real bloqueada por permissões LangSmith e configuração de temperatura.** Testes estruturais e simulações não medem a qualidade das respostas.
 
 | Métrica | Resultado real | Meta |
 | --- | --- | --- |
@@ -130,7 +135,7 @@ e Correctness é a média de F1 e Precision. O relatório exige cada uma das cin
 
 Pendências para concluir a avaliação acadêmica:
 
-1. Configurar credenciais, handle e modelos; executar pull e push e verificar o prompt público no Hub.
+1. Substituir a chave de tracing por uma chave com permissões para prompts, datasets e avaliações. O handle `jmendes82` já foi criado e o prompt v2 publicado pela interface. Ajustar a compatibilidade de temperatura para `gpt-6-sol` antes de repetir os scripts.
 2. Rodar o avaliador original contra os 15 exemplos. Registrar modelos, commit do prompt,
    URL do experimento e as cinco notas reais.
 3. Realizar 3–5 iterações conforme o enunciado: analisar feedback, modificar apenas o prompt,
